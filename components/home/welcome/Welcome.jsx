@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react'
 import { 
   View, 
@@ -29,6 +30,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
           <TextInput
             style={styles.searchInput}
             value={searchTerm}
+            testID='jobSearchField'
             onChangeText={(text) => setSearchTerm(text)}
             placeholder="What are you looking for?"
           />
@@ -39,6 +41,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             source={icons.search}
             resizeMode='contain'
             style={styles.searchBtnImage}
+            testID='jobSearchBtn'
           />
         </TouchableOpacity>
       </View>
@@ -53,6 +56,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
                 setActiveJobType(item);
                 router.push('/search/' + item)
               }}
+              testID={'searchBtn' + item}
             >
               <Text style={styles.tabText(activeJobType, item)}>
                 {item}

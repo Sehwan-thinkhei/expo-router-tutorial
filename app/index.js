@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { View, ScrollView, SafeAreaView } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
@@ -11,15 +12,23 @@ const Home = () => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
-            <Stack.Screen 
-                options={{ 
+            <Stack.Screen
+                options={{
                     headerStyle: { backgroundColor: COLORS.lightWhite }, 
                     headerShadowVisible: false, 
                     headerLeft: () => (
-                        <ScreenHeaderBtn iconUrl={ icons.menu } dimension="60%" />
+                        <ScreenHeaderBtn 
+                            iconUrl={ icons.menu }
+                            dimension="60%"
+                            testID='leftHeaderBtn'
+                        />
                     ), 
                     headerRight: () => (
-                        <ScreenHeaderBtn iconUrl={ images.profile } dimension="100%" />
+                        <ScreenHeaderBtn
+                            iconUrl={ images.profile }
+                            dimension="100%"
+                            testID='rightHeaderBtn'
+                        />
                     ), 
                     headerTitle: ""
                 }}

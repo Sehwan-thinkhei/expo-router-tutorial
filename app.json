@@ -5,6 +5,21 @@
       "bundler": "metro"
     },
     "name": "expo-router-tutorial",
-    "slug": "expo-router-tutorial"
+    "slug": "expo-router-tutorial",
+    "icon": "./assets/favicon.png",
+    "version": "1.0.0",
+    "ios": {
+      "bundleIdentifier": "com.thinkhei.expo-router-tutorial",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.thinkhei.expo_router_tutorial",
+      "versionCode": 1
+    },
+    "extra": {
+      "eas": {
+        "projectId": "13bc6f74-1002-4160-b7c7-a3d05984e5d2"
+      }
+    }
   }
 }

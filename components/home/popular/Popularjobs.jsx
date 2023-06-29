@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import { 
   View, 
@@ -42,12 +43,13 @@ const Popularjobs = () => {
         {isLoading ? (
           <ActivityIndicator size="large" colors={COLORS.primary}/>
         ) : error ? (
-          <Text>Something went wrong</Text>
+          <Text testID='popularCardsContainer'>Something went wrong</Text>
         ) : (
-          <FlatList 
+          <FlatList
             data={data}
+            testID='popularCardsContainer'
             renderItem={({ item }) => (
-              <PopularJobCard 
+              <PopularJobCard
                 item={item}
                 selectedJob={selectedJob}
                 handleCardPress={handleCardPress}
